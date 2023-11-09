@@ -7,23 +7,52 @@ switchButton.addEventListener('click', () => {
     switchButton.classList.toggle('active');
 });
 
-const contenido =document.querySelector(".contenido")
+function crearTarjetas(){
+    const contenido =document.querySelector(".contenido")
 
-
-if(contenido){
-    for(let i = 0 ; i< data.length; i++){
-        
-        const personaje = data[i]
-
-        let tarjetas = document.createElement("div")
-        tarjetas.classList.add("items")
-        tarjetas.innerHTML= `<div><a href="./pages/catalogo.html"><img class="buzo" src="${personaje.image}" alt=""><p>${personaje.name}<br>${personaje.status}<br>${personaje.gender}<br>${personaje.origin.name}<br><span class="material-symbols-outlined" style="color: #ffd801;">
-        star
-        </span><p></a></div>`
-        
-        contenido.append(tarjetas)
+    if(contenido){
+        for(let i = 0 ; i< data.length; i++){
+            
+            const personaje = data[i]
+    
+            let tarjetas = document.createElement("div")
+            tarjetas.classList.add("items")
+            tarjetas.innerHTML= `<div><a href="./pages/catalogo.html"><img class="buzo" src="${personaje.image}" alt=""><p>${personaje.name}<br>${personaje.status}<br>${personaje.gender}<br>${personaje.origin.name}<br><span class="material-symbols-outlined" style="color: #ffd801;">
+            star
+            </span><p></a></div>`
+            
+            contenido.append(tarjetas)
+        }
     }
 }
+
+crearTarjetas()
+
+const contenido =document.querySelector(".contenido")
+
+function limpiar (){
+    const items =document.querySelectorAll(".items");
+    items.forEach((item) => {
+    item.remove();
+    });
+}    
+    
+
+// if(contenido){
+//     for(let i = 0 ; i< data.length; i++){
+        
+//         const personaje = data[i]
+
+//         let tarjetas = document.createElement("div")
+//         tarjetas.classList.add("items")
+//         tarjetas.innerHTML= `<div><a href="./pages/catalogo.html"><img class="buzo" src="${personaje.image}" alt=""><p>${personaje.name}<br>${personaje.status}<br>${personaje.gender}<br>${personaje.origin.name}<br><span class="material-symbols-outlined" style="color: #ffd801;">
+//         star
+//         </span><p></a></div>`
+        
+//         contenido.append(tarjetas)
+//     }
+// }
+
 
 
 const busqueda = document.querySelector('#barraBusqueda');
@@ -34,12 +63,9 @@ busqueda.addEventListener("submit", (e) => {
     let bus = buscar.value;
     busqueda.reset()
     
+
     const search = data.filter((personaje) => personaje.name.includes (bus));
-    
-    const items =document.querySelectorAll(".items");
-        items.forEach((item) => {
-        item.remove();
-        });
+    limpiar()
         
         if(search){
             for(let i = 0 ; i< search.length; i++){
@@ -57,8 +83,59 @@ busqueda.addEventListener("submit", (e) => {
         }
     }
     
+
 });
 
 
+
+
+const ordenaraZ = document.querySelector(".aZ");
+ordenaraZ.addEventListener("click", ordenarElementosAz);
+
+function ordenarElementosAz(){
+    limpiar()
+    data.sort((b, a) => b.name > a.name);
+    const primero = data[0];
+    //     if(primero){
+    //         for(let i = 0 ; i < data.length; i++){
+        
+    //         const personaje = data[i]
+
+    //         let tarjetas = document.createElement("div")
+    //         tarjetas.classList.add("items")
+    //         tarjetas.innerHTML= `<div><a href="./pages/catalogo.html"><img class="buzo" src="${personaje.image}" alt=""><p>${personaje.name}<br>${personaje.status}<br>${personaje.gender}<br>${personaje.origin.name}<br><span class="material-symbols-outlined" style="color: #ffd801;">
+    //         star
+    //         </span><p></a></div>`
+        
+    //         contenido.append(tarjetas)
+    // }
+// }
+    crearTarjetas(primero)
+}
+
+
+const ordenarZa = document.querySelector(".Za");
+ordenarZa.addEventListener("click", ordenarElementosZa);
+
+function ordenarElementosZa(){
+    limpiar()
+    data.sort((a, b) => b.name > a.name);
+    const primero = data[0];
+//         if(primero){
+//             for(let i = 0 ; i < data.length; i++){
+        
+//             const personaje = data[i]
+
+//             let tarjetas = document.createElement("div")
+//             tarjetas.classList.add("items")
+//             tarjetas.innerHTML= `<div><a href="./pages/catalogo.html"><img class="buzo" src="${personaje.image}" alt=""><p>${personaje.name}<br>${personaje.status}<br>${personaje.gender}<br>${personaje.origin.name}<br><span class="material-symbols-outlined" style="color: #ffd801;">
+//             star
+//             </span><p></a></div>`
+        
+//             contenido.append(tarjetas)
+//     }
+// }
+    crearTarjetas(primero)
+}
 
 
