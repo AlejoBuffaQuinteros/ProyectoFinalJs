@@ -1,0 +1,18 @@
+body.dark {   background:  rgba(12, 12, 21, 0.987) }
+body.dark h2 {   color:#fff}
+body.dark footer {    background:#3700b3;}
+body.dark footer svg{ color: #fff;}
+body.dark footer p {color: #fff;}
+body.dark nav {  background: #3700b3;}
+body.dark nav button{ background: #018786;}
+body.dark nav a {  color: #fff;}
+body.dark article .contenido { color: #fff;}
+body.dark article .items img { border: 3px solid #018786;}
+body.dark article a { color: #fff;}
+body.dark article select { background-color: #018786;}
+
+
+
+
+
+

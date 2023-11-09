@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@300&family=Tektur:wght@500&display=swap");
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Tektur", cursive;
+ }
+
+
+
+header{
+      height: 15rem;
+      width: 100%;
+      background-image: url(../img/portada.jpg);
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color:rgba(0, 0, 0, 0.40);
+      background-blend-mode: darken;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+}
+
+header img{
+   width: 35%;
+}
+
+nav{
+   background-color: #6200ee;
+}
+
+nav a{
+   color: #000;
+}
+
+nav  .nav-link{
+   color: #000000;
+ }
+
+nav .btn{
+   background-color: #03dac6;
+   border: none;
+   color: #ffffff;
+}
+
+article{
+   margin-top: 2rem;
+}
+
+article select{ 
+  width: 130px;
+  height: 30px;
+  padding-block: 6px;
+  padding-inline: 12px;
+  margin-left: 90%;
+  background-color: #03dac6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.contenido{
+   margin-bottom: 0;
+   padding: 4rem;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 3rem;
+   justify-content: center;
+   align-items: center;}
+
+
+
+ .items{
+   margin-inline: 2rem;
+   padding: 4rem;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 3rem;
+   justify-content: center;
+   align-items: center;
+}
+
+
+ .items img{ 
+   width: 20rem;
+   height: 25rem;
+   border: 3px solid #03dac6; 
+   border-radius: 2rem;
+   filter: brightness(0.75);
+}
+
+.items a{
+   text-decoration: none;
+   color: #000;
+   text-align: center;
+   
+}
+
+
+
+footer{
+   background-color: #6200ee;
+}
+
+footer svg{
+   color: #000;
+}
+
+footer p{
+   color: #000;
+}
+
+
+
+
+
+
+
+
+select option:hover {
+   box-shadow: 0 0 10px 100px #1882A8 inset;
+}
+
+
+.nav-link:hover{
+   color: #fff;
+}
+
+
+.items img:hover {
+   outline: none;
+   border-color: #03dac6;
+   box-shadow: 0 0 10px rgb(163, 198, 243);
+   filter: brightness(1);
+ }
