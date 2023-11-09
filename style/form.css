@@ -1,0 +1,33 @@
+
+#miFormulario{
+   padding-block: 100px;
+   color: #fff;
+   max-width: 400px;
+   margin: 0 auto;
+}
+
+#miFormulario label {
+   display: block;
+   margin-bottom: 8px;
+ }
+
+ #miFormulario input,
+ textarea {
+   width: 100%;
+   padding: 8px;
+   margin-bottom: 16px;
+   box-sizing: border-box;
+ }
+
+ #miFormulario button  {
+   background-color: #6200ee;
+   color: white;
+   padding: 10px 15px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+ }
+
+ #miFormulario button:hover {
+   background-color: #3700b3;
+ }

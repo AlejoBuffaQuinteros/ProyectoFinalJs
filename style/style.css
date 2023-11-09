@@ -45,6 +45,28 @@ nav .btn{
    color: #ffffff;
 }
 
+.darkModeSwitch{
+   background: #030303;
+   display:flex;
+   position: relative;
+   cursor: pointer;
+   outline: none;
+   border: none;
+   border-radius: 1rem;
+   align-items: center;
+   justify-content: space-between;
+}
+.darkModeSwitch span{
+   width:30px;
+   line-height:30px;
+   display:block;
+   color:#fff;
+
+   background: none;
+}
+
+
+
 article{
    margin-top: 2rem;
 }
@@ -92,13 +114,27 @@ article select{
    filter: brightness(0.75);
 }
 
-.items a{
-   text-decoration: none;
-   color: #000;
+ p {
    text-align: center;
-   
 }
 
+.btnFav{
+   background: #6200ee;
+   padding: 0.4rem;
+   cursor: pointer;
+   outline: none;
+   border: none;
+   border-radius: 0.85rem;
+}
+
+.btnFav span{
+   width:30px;
+   line-height:30px;
+   display:block;
+   color:#fff;
+
+   background:none;
+}
 
 
 footer{
@@ -112,11 +148,6 @@ footer svg{
 footer p{
    color: #000;
 }
-
-
-
-
-
 
 
 

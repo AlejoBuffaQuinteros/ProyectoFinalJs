@@ -1,11 +1,20 @@
 import {data} from "./data/data.js"
 
+
 const switchButton = document.getElementById('switch');
+let darkMode = localStorage.getItem("dark-mode") === 'true';
+    document.body.classList.toggle("dark", darkMode);
+    switchButton.classList.toggle("active", darkMode);
  
-switchButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    switchButton.classList.toggle('active');
+switchButton.addEventListener("click", () => {
+    const estado = !darkMode;
+    localStorage.setItem("dark-mode", estado);
+    document.body.classList.toggle('dark', estado);
+    switchButton.classList.toggle('active', estado);
 });
+
+
+
 
 function crearTarjetas(){
     const contenido =document.querySelector(".contenido")
@@ -17,9 +26,8 @@ function crearTarjetas(){
     
             let tarjetas = document.createElement("div")
             tarjetas.classList.add("items")
-            tarjetas.innerHTML= `<div><a href="./pages/catalogo.html"><img class="buzo" src="${personaje.image}" alt=""><p>${personaje.name}<br>${personaje.status}<br>${personaje.gender}<br>${personaje.origin.name}<br><span class="material-symbols-outlined" style="color: #ffd801;">
-            star
-            </span><p></a></div>`
+            tarjetas.innerHTML= `<div><img class="card" src="${personaje.image}" alt=""><p>${personaje.name}<br>${personaje.status}<br>${personaje.gender}<br>${personaje.origin.name}<br><button class="btnFav" id="btnFavorito"><span class="material-symbols-outlined" style="color: #ffd801;">
+            star</span></button><p></div>`
             
             contenido.append(tarjetas)
         }
@@ -28,7 +36,7 @@ function crearTarjetas(){
 
 crearTarjetas()
 
-const contenido =document.querySelector(".contenido")
+
 
 function limpiar (){
     const items =document.querySelectorAll(".items");
@@ -36,6 +44,8 @@ function limpiar (){
     item.remove();
     });
 }    
+
+
     
 const busqueda = document.querySelector('#barraBusqueda');
 const buscar = document.querySelector('#btnBuscar');
@@ -45,7 +55,7 @@ busqueda.addEventListener("submit", (e) => {
     let bus = buscar.value;
     busqueda.reset()
     
-
+    const contenido =document.querySelector(".contenido")
     const search = data.filter((personaje) => personaje.name.includes (bus));
     limpiar()
         
@@ -56,16 +66,11 @@ busqueda.addEventListener("submit", (e) => {
             
                 let tarjetas = document.createElement("div")               
                 tarjetas.classList.add("items")
-                tarjetas.innerHTML= `<div><a href="./pages/catalogo.html"><img class="buzo" src="${personaje.image}" alt=""><p>${personaje.name}<br>${personaje.status}<br>${personaje.gender}<br>${personaje.origin.name}<br><span class="material-symbols-outlined" style="color: #ffd801;">
-                star
-                </span><p></a></div>`
-            
-                
+                tarjetas.innerHTML= `<div><img class="card" src="${personaje.image}" alt=""><p>${personaje.name}<br>${personaje.status}<br>${personaje.gender}<br>${personaje.origin.name}<br><p></div>`
+                            
                 contenido.append(tarjetas)
         }
     }
-    
-
 });
 
 
@@ -91,5 +96,6 @@ function ordenarElementosZa(){
     const primero = data[0];
     crearTarjetas(primero)
 }
+
 
 
