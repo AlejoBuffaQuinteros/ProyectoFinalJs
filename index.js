@@ -37,24 +37,6 @@ function limpiar (){
     });
 }    
     
-
-// if(contenido){
-//     for(let i = 0 ; i< data.length; i++){
-        
-//         const personaje = data[i]
-
-//         let tarjetas = document.createElement("div")
-//         tarjetas.classList.add("items")
-//         tarjetas.innerHTML= `<div><a href="./pages/catalogo.html"><img class="buzo" src="${personaje.image}" alt=""><p>${personaje.name}<br>${personaje.status}<br>${personaje.gender}<br>${personaje.origin.name}<br><span class="material-symbols-outlined" style="color: #ffd801;">
-//         star
-//         </span><p></a></div>`
-        
-//         contenido.append(tarjetas)
-//     }
-// }
-
-
-
 const busqueda = document.querySelector('#barraBusqueda');
 const buscar = document.querySelector('#btnBuscar');
 
@@ -96,20 +78,6 @@ function ordenarElementosAz(){
     limpiar()
     data.sort((b, a) => b.name > a.name);
     const primero = data[0];
-    //     if(primero){
-    //         for(let i = 0 ; i < data.length; i++){
-        
-    //         const personaje = data[i]
-
-    //         let tarjetas = document.createElement("div")
-    //         tarjetas.classList.add("items")
-    //         tarjetas.innerHTML= `<div><a href="./pages/catalogo.html"><img class="buzo" src="${personaje.image}" alt=""><p>${personaje.name}<br>${personaje.status}<br>${personaje.gender}<br>${personaje.origin.name}<br><span class="material-symbols-outlined" style="color: #ffd801;">
-    //         star
-    //         </span><p></a></div>`
-        
-    //         contenido.append(tarjetas)
-    // }
-// }
     crearTarjetas(primero)
 }
 
@@ -121,20 +89,6 @@ function ordenarElementosZa(){
     limpiar()
     data.sort((a, b) => b.name > a.name);
     const primero = data[0];
-//         if(primero){
-//             for(let i = 0 ; i < data.length; i++){
-        
-//             const personaje = data[i]
-
-//             let tarjetas = document.createElement("div")
-//             tarjetas.classList.add("items")
-//             tarjetas.innerHTML= `<div><a href="./pages/catalogo.html"><img class="buzo" src="${personaje.image}" alt=""><p>${personaje.name}<br>${personaje.status}<br>${personaje.gender}<br>${personaje.origin.name}<br><span class="material-symbols-outlined" style="color: #ffd801;">
-//             star
-//             </span><p></a></div>`
-        
-//             contenido.append(tarjetas)
-//     }
-// }
     crearTarjetas(primero)
 }
 
