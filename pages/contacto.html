@@ -41,7 +41,7 @@
       </div>
     </nav>
     <article>
-      <form id="miFormulario" onclick="enviarFormulario(event)">
+      <form id="miFormulario">
          <label for="nombre">Nombre:</label>
          <input type="text" id="nombre" name="nombre" required>
      
@@ -51,7 +51,7 @@
          <label for="mensaje">Mensaje:</label>
          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
      
-         <button type="submit">Enviar</button>
+         <button id="btnSendForm" type="submit">Enviar</button>
        </form>
      
     </article>
@@ -90,6 +90,6 @@
 </footer>
 <script type="module" src="..//index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script type="module" src="../scripts/favoritos.js"></script>
+<script type="module" src="../scripts/contacto.js"></script>
 </body>
 </html>

@@ -3,15 +3,20 @@ import {data} from "./data/data.js"
 
 const switchButton = document.getElementById('switch');
 let darkMode = localStorage.getItem("dark-mode") === 'true';
+
+function modoOnOff(){
     document.body.classList.toggle("dark", darkMode);
     switchButton.classList.toggle("active", darkMode);
+}
+
+modoOnOff();
  
 switchButton.addEventListener("click", () => {
-    const estado = !darkMode;
-    localStorage.setItem("dark-mode", estado);
-    document.body.classList.toggle('dark', estado);
-    switchButton.classList.toggle('active', estado);
+    darkMode = !darkMode;
+    localStorage.setItem("dark-mode", darkMode);
+    modoOnOff()
 });
+
 
 
 
@@ -96,6 +101,7 @@ function ordenarElementosZa(){
     const primero = data[0];
     crearTarjetas(primero)
 }
+
 
 
 
