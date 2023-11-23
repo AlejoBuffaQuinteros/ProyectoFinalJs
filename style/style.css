@@ -91,9 +91,18 @@ article select{
    flex-wrap: wrap;
    gap: 3rem;
    justify-content: center;
-   align-items: center;}
+   align-items: center;
+}
 
-
+.contenedorFavoritos{
+      margin-bottom: 0;
+      padding: 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      justify-content: center;
+      align-items: center;
+}
 
  .items{
    margin-inline: 2rem;
@@ -131,8 +140,22 @@ article select{
    width:30px;
    line-height:30px;
    display:block;
-   color:#fff;
+   background:none;
+}
 
+.btnEliminarFav{
+   background: #6200ee;
+   padding: 0.4rem;
+   cursor: pointer;
+   outline: none;
+   border: none;
+   border-radius: 0.85rem;
+}
+
+.btnEliminarFav span{
+   width:30px;
+   line-height:30px;
+   display:block;
    background:none;
 }
 
