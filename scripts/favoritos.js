@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
             datosFavoritos.splice(elimItem, 1);
             localStorage.setItem('datosFavoritos', JSON.stringify(datosFavoritos));
             this.closest('.items').remove();
+            alert('Se elimino favorito')
          });
       });
    }
